@@ -9,10 +9,9 @@ export const adminProtect = async (
   try {
     let token;
     if (
-      req.headers.authorization &&
-      req.headers.authorization.startsWith("Bearer")
+      req.headers.authorization 
     ) {
-      token = req.headers.authorization.split(" ")[1] as string;
+      token = req.headers.authorization as string;
     }
     if (!token) {
       res

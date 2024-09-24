@@ -36,7 +36,7 @@ export const dashboard = async (req: Request, res: Response) => {
 };
 
 export const loanApproval = async (req: Request, res: Response) => {
-  const { id, status } = req.params;
+  const { id, status } = req.body;
   try {
     await LoanModel.findOneAndUpdate(
       { _id: id },

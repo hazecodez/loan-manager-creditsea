@@ -53,6 +53,8 @@ export const login = async (req: Request, res: Response) => {
 };
 
 export const dashboard = async (req: AuthRequest, res: Response) => {
+  
+  
   const userId = req.user?._id;
   try {
     const loans = await LoanModel.find({ userId: userId });

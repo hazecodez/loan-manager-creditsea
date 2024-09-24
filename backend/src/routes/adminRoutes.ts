@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.post("/login", loginAdmin);
 router.get("/dashboard", adminProtect, dashboard);
-router.put("/approve-loan", adminProtect, loanApproval);
+router.patch("/approve-loan", adminProtect, loanApproval);
 
 export default router;
